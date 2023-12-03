@@ -1,7 +1,7 @@
 import requests
 
-HASH_TOKEN = 'PASTE YOUR HASH TOKEN HERE'
-APP_ID = 'PASTE YOUR APP ID HERE'
+HASH_TOKEN = 'NWd5MzE0aWRwMHw3djRmc2hiV2tnM0d5OFVGVEs1S1Y4ZWkwamlyN3RYVDgxT2FvTVhM'
+APP_ID = '5gy314idp0'
 TOKEN_URL = 'https://api.iq.inrix.com/auth/v1/appToken'
 
 def get_token():

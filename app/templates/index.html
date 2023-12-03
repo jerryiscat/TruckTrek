@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+        <div class="container">
+            <a class="navbar-brand" href="#">TruckerTrek</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="/getToken">GetToken</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="starter-template">
+            <h1 class="starter-template-heading">Welcome</h1>
+            <h3 class="starter-template-heading">Plan route for your truck!</h3>
+            <hr>
+            <p class="lead starter-template-paragraph">
+            <h6>Select the truck type:</h6>
+            <select id="truckSelect">
+                <option value="Semi Truck">Semi Truck</option>
+                <option value="Dry Van Trucks">Dry Van Trucks</option>
+                <option value="Refrigerated Truck">Refrigerated Truck</option>
+                <option value="Flatbed Truck">Flatbed Truck</option>
+                <option value="Intermodal Container Truck">Intermodal Container Truck</option>
+                <option value="Bulk Carrier">Bulk Carrier</option>
+                <option value="Parcel Delivery Truck">Parcel Delivery Truck</option>
+            </select>
+
+            <div id="truckInfo"></div>
+            <hr>
+            <script>
+                async function loadTruckInfo() {
+                    try {
+                        const response = await fetch('/static/truck_data.json'); // Path to JSON file
+                        const data = await response.json();
+                        const truckInfoContainer = document.getElementById('truckInfo');
+                        const truckSelect = document.getElementById('truckSelect');
+
+
+                        truckSelect.addEventListener('change', () => {
+                            const selectedTruck = truckSelect.value;
+                            const selectedData = data.find(truck => truck.Truck === selectedTruck);
+
+                            if (selectedData) {
+                                truckInfoContainer.innerHTML = `
+                                    <h3>${selectedData.Truck}</h3>
+                                    <p>Miles per gallon (Avg): ${selectedData['Miles per gallon (Avg)']}</p>
+                                    <p>Fuel Tank Capacity (Avg): ${selectedData['Fuel Tank Capacity (Avg)']}</p>
+                                    <p>Total miles (Avg): ${selectedData['Total miles (Avg)']}</p>
+                                `;
+                            } else {
+                                truckInfoContainer.innerHTML = '<p>Truck not found.</p>';
+                            }
+                        });
+                    } catch (error) {
+                        console.error('Error loading truck data:', error);
+                    }
+                }
+                loadTruckInfo();
+            </script>
+            
+            <button id="saveTruckType">Save</button>
+            <hr>
+            <div id="routePlanner" style="display: none;">
+                <!-- Route planner content goes here -->
+                <h5>Suggest Route:</h5>
+
+                <iframe src="map" width="100%" height="500" frameborder="0"></iframe>
+
+            </div>
+            
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ url_for('static', filename='js/home.js') }}"></script>
+
+</body>
+</html>
