@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch the API token when the "GetToken" link in the navbar is clicked
     const getTokenLink = document.querySelector('.nav-link[href="/getToken"]');
     const tokenContainer = document.getElementById('token-container');
-    
     getTokenLink.addEventListener('click', function (event) {
         // Prevent the default behavior of the link (which would navigate to a new page)
         event.preventDefault();
