@@ -1,22 +1,8 @@
-# INRIX_Hack_Client_Server_Flask_Demo
-This repository will guide you through the process of creating a Flask server/backend app, developing APIs, setting up a frontend Vanilla JavaScript application, and making a simple API call. The goal is to demonstrate how to seamlessly integrate and exchange data between the frontend and backend applications.
+# TruckTrek
+The inspiration behind our project lies in the challenging conditions faced by the 3.5 million truck drivers in the U.S. According to the Bureau of Labor (2023). These professionals play a vital role in our economy. However, the alarming statistics of more than 160,000 truck accidents annually, with approximately 32% causing injuries and 3% resulting in fatalities (TruckInfo.net), highlight the pressing need for innovative solutions. Additionally, recognizing the health risks such as obesity, hypertension, and extreme fatigue that truck drivers face due to their demanding lifestyle further motivates our commitment to developing a solution that prioritizes both safety on the roads and the well-being of these essential workers.
 
-
-# Client Server Flask App - INRIX HACK 2023
-
-## Overview
-This repository contains the source code for a Flask web application developed for INRIX HACK 2023. The application serves as a client-server demo example to help you get started with client-server interactions using Flask and Bootstrap.
-
-## Links
-If you wish to see an ExpressJS example for the same project goto: [ExpressJS code example](https://github.com/INRIX-Aashay-Motiwala/INRIX_Hack_Client_Server_ExpressJS_Demo)
-
-
-
-## Features
-- **Home Page**: A simple home page with Bootstrap styling.
-- You can click the GetToken button in the navbar after hosting this app locally to print the token on the html page
-- **GetToken Endpoint**: Access the `/getToken` endpoint to receive a JSON response with the Auth Token.
-  
+# Introduction
+We created this app to design the route for truck drivers to promote safety and efficiency. We advocate for a recommended break every 100 mileage, incorporating designated stops along the route for this purpose. At each stop, drivers receive information about accidents for the next stop, nearby restaurants and gas station place.
 
 ## Prerequisites
 - Python 3.x
@@ -24,28 +10,19 @@ If you wish to see an ExpressJS example for the same project goto: [ExpressJS co
 
 ## Setup Instructions
 
-1. **Clone the Repository:**
-    ```bash
-    git clone git@github.com:<YOUR USER NAME>/INRIX_Hack_Client_Server_Demo.git
-    cd INRIX_Hack_Client_Server_Demo
-    ```
-
-2. **Create a Virtual Environment (Optional):**
+1. **Create a Virtual Environment (Optional):**
     ```bash
     pip3 install virtualenv
     virtualenv venv
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 
-3. **Install Dependencies:**
+2. **Install Dependencies:**
     ```bash
     pip3 install -r requirements.txt
     ```
-4. !!! Make sure to paste your INRIX APP_ID and HASH_TOKEN in app/utils/auth_utils.py i.e. [here](https://github.com/INRIX-Aashay-Motiwala/INRIX_Hack_Client_Server_Demo/blob/7058cd0d5c7a482a93ac7a6efeef68428fcab106/app/utils/auth_utils.py#L3) before you run your application
-
-## Running the Application
-
-1. **Start the Flask App:**
+    
+3. **Start the Flask App:**
     ```bash
     python main.py 
     ```
@@ -54,15 +31,3 @@ If you wish to see an ExpressJS example for the same project goto: [ExpressJS co
 2. **Access the App:**
     Open your web browser and go to [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
-3. **Explore the App:**
-    - Click on the "GetToken" link in the navigation bar to fetch and display the API token dynamically.
-    
-## File Structure
-- **app.py:** Flask application script.
-- **templates/:** HTML templates for the web pages.
-- **static/:** Static files (CSS, JS).
----
-
-If you want to learn how to parse a JSON Dataset goto [Example](https://github.com/INRIX-Aashay-Motiwala/INRIX_Hack_Client_Server_Demo/blob/main/json_parser_example.py)
-
-**Happy Hacking!**
