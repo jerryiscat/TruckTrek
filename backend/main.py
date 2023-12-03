@@ -14,6 +14,7 @@ CORS(app)
 def index():
     return render_template('index.html')
 
+
 # This is the route that will help you get the token and return it as a JSON response
 @app.route('/getToken', methods=['GET'])
 def display_token():

@@ -1,0 +1,44 @@
+[
+    {
+        "Truck": "Semi Truck",
+        "Miles per gallon (Avg)": 6,
+        "Fuel Tank Capacity (Avg)": 200,
+        "Total miles (Avg)": 1200
+    },
+    {
+        "Truck": "Dry Van Trucks",
+        "Miles per gallon (Avg)": 7,
+        "Fuel Tank Capacity (Avg)": 150,
+        "Total miles (Avg)": 1050
+    },
+    {
+        "Truck": "Refrigerated Truck",
+        "Miles per gallon (Avg)": 6.5,
+        "Fuel Tank Capacity (Avg)": 175,
+        "Total miles (Avg)": 1138
+    },
+    {
+        "Truck": "Flatbed Truck",
+        "Miles per gallon (Avg)": 5.5,
+        "Fuel Tank Capacity (Avg)": 250,
+        "Total miles (Avg)": 1375
+    },
+    {
+        "Truck": "Intermodal Container Truck",
+        "Miles per gallon (Avg)": 7.5,
+        "Fuel Tank Capacity (Avg)": 180,
+        "Total miles (Avg)": 1350
+    },
+    {
+        "Truck": "Bulk Carrier",
+        "Miles per gallon (Avg)": 6,
+        "Fuel Tank Capacity (Avg)": 200,
+        "Total miles (Avg)": 1200
+    },
+    {
+        "Truck": "Parcel Delivery Truck",
+        "Miles per gallon (Avg)": 10,
+        "Fuel Tank Capacity (Avg)": 30,
+        "Total miles (Avg)": 300
+    }
+]

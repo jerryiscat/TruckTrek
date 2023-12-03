@@ -1,13 +1,17 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+#routePlanner {
+    height: 400px;
 }
+  
 
 .starter-template {
-    text-align: left;
-    margin-top: 20px; /* Adjust this margin as needed */
+    text-align: left; /* Adjust this margin as needed */
 }
 
 .starter-template-heading,
